@@ -13,6 +13,9 @@ namespace Proyecto_Final_4.Controllers
             return View();
         }
 
+        public ActionResult Inicio()
+        { return View(); }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

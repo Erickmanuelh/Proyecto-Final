@@ -19,8 +19,8 @@ namespace Proyecto_Final_4.Controllers
             ViewBag.TotalSalario = db.EmpleadosSet.Sum(a => a.Salario);
             ViewBag.TotalEmpleados = db.EmpleadosSet.Count();
 
-         //   var query = (from a in db.EmpleadosSet
-         //                select a);
+        //    var query = (from a in db.EmpleadosSet
+          //               select a);
 
             db.SaveChanges();
             return View();

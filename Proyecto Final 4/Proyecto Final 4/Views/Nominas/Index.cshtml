@@ -4,42 +4,166 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Anio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Monto)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Anio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Monto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
+@{
+    ViewBag.Title = "Totalizar";
+    Layout = "";
 }
 
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Page Title -->
+    <title>About</title>
+    @Styles.Render("~/Content/css")
+
+    <style>
+        .heading {
+            color: #FFFFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Header Area Starts -->
+    <header class="header-area single-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="custom-navbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="main-menu main-menu-light">
+
+
+                            <ul>
+                                <li class="active"><a href="index.html">home</a></li>
+                                <li><a href="about.html">about us</a></li>
+                                <li><a href="job-category.html">category</a></li>
+                                <li>
+                                    <a href="#">blog</a>
+                                    <ul class="sub-menu">
+                                        <li>@Html.ActionLink("Nomina", "Totalizar", "Nominas")</li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html">contact</a></li>
+                                <li>
+                                    <a href="#">pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="job-search.html">Job Search</a></li>
+                                        <li><a href="job-single.html">Job Single</a></li>
+                                        <li><a href="pricing-plan.html">Pricing Plan</a></li>
+                                        <li><a href="elements.html">Elements</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-title text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+
+                        <h2>Inicio</h2>
+
+                        <p>
+                            @Html.ActionLink("Crear Nueva", "Create")
+                        </p>
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    <p> @Html.DisplayNameFor(model => model.Anio) </p>
+                                </th>
+                                <th>
+                                    <p> @Html.DisplayNameFor(model => model.Mes)</p>
+                                </th>
+                                <th>
+                                    <p>  @Html.DisplayNameFor(model => model.Monto)</p>
+                                </th>
+                                <th></th>
+                            </tr>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <p>   @Html.DisplayFor(modelItem => item.Anio)</p>
+                                    </td>
+                                    <td>
+                                        <p>   @Html.DisplayFor(modelItem => item.Mes)</p>
+                                    </td>
+                                    <td>
+                                        <p>  @Html.DisplayFor(modelItem => item.Monto)</p>
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                                        @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+    <!-- Feature Area Starts -->
+    </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6">
+                    <span>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </span>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- Javascript -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>

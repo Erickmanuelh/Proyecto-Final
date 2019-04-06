@@ -1,42 +1,162 @@
 ﻿@model Proyecto_Final_4.Models.Nominas
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Totalizar";
+    Layout = "";
 }
 
-<h2>Details</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<div>
-    <h4>Nominas</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Anio)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Anio)
-        </dd>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Page Title -->
+    <title>About</title>
+    @Styles.Render("~/Content/css")
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Mes)
-        </dt>
+    <style>
+        .heading {
+            color: #FFFFFF;
+        }
+    </style>
 
-        <dd>
-            @Html.DisplayFor(model => model.Mes)
-        </dd>
+</head>
+<body>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Monto)
-        </dt>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Header Area Starts -->
+    <header class="header-area single-page">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="custom-navbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="main-menu main-menu-light">
 
-        <dd>
-            @Html.DisplayFor(model => model.Monto)
-        </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                            <ul>
+                                <li class="active"><a href="index.html">home</a></li>
+                                <li><a href="about.html">about us</a></li>
+                                <li><a href="job-category.html">category</a></li>
+                                <li>
+                                    <a href="#">blog</a>
+                                    <ul class="sub-menu">
+                                        <li>@Html.ActionLink("Nomina", "Totalizar", "Nominas")</li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html">contact</a></li>
+                                <li>
+                                    <a href="#">pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="job-search.html">Job Search</a></li>
+                                        <li><a href="job-single.html">Job Single</a></li>
+                                        <li><a href="pricing-plan.html">Pricing Plan</a></li>
+                                        <li><a href="elements.html">Elements</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-title text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+
+
+                        <h2>Detalles</h2>
+
+                        <div>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    <p>    @Html.DisplayNameFor(model => model.Anio)</p>
+                                </dt>
+
+                                <dd>
+                                    <p>    @Html.DisplayFor(model => model.Anio)</p>
+                                </dd>
+
+                                <dt>
+                                    <p>    @Html.DisplayNameFor(model => model.Mes)</p>
+                                </dt>
+
+                                <dd>
+                                    <p>    @Html.DisplayFor(model => model.Mes)</p>
+                                </dd>
+
+                                <dt>
+                                    <p>   @Html.DisplayNameFor(model => model.Monto)</p>
+                                </dt>
+
+                                <dd>
+                                    <p>     @Html.DisplayFor(model => model.Monto)</p>
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <p>
+                            @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+                            @Html.ActionLink("Volver", "Index")
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+    <!-- Feature Area Starts -->
+    </div>
+    </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-6">
+                    <span>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </span>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- Javascript -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
