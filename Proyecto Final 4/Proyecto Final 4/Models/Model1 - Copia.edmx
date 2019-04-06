@@ -565,7 +565,7 @@
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="17ea34a8269a4bceb173b89919572dc5" Name="Diagram1">
+      <Diagram DiagramId="17ea34a8269a4bceb173b89919572dc5" Name="Diagram1" ZoomLevel="62">
         <EntityTypeShape EntityType="Model1.Empleados" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Departamentos" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="Model1.Cargos" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
