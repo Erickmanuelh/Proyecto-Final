@@ -1,4 +1,15 @@
-﻿@model Proyecto_Final_4.Models.Vacaciones
+﻿@model Proyecto_Final_4.Models.Cargos
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+///////////////
+@model Proyecto_Final_4.Models.Departamentos
 @{
     ViewBag.Title = "Totalizar";
     Layout = "";
@@ -81,51 +92,16 @@
                     <div class="col-md-6 offset-md-3">
 
                         <h2>Detalles</h2>
-                        <div>
-                            <hr />
+                        
                             <dl class="dl-horizontal">
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.CodigoE)
+                                    @Html.DisplayNameFor(model => model.Cargo)
                                 </dt>
-
                                 <dd>
-                                    @Html.DisplayFor(model => model.CodigoE)
+                                    @Html.DisplayFor(model => model.Cargo)
                                 </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Desde)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Desde)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Hasta)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Hasta)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Correspondiente)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Correspondiente)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Comentarios)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Comentarios)
-                                </dd>
-
                             </dl>
-                        </div>
+                       
                         <p>
                             @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
                             @Html.ActionLink("Volver", "Index")

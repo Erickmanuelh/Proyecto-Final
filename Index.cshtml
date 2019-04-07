@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Proyecto_Final_4.Models.Vacaciones>
+﻿@model IEnumerable<Proyecto_Final_4.Models.Cargos>
 @{
     ViewBag.Title = "Index";
 }
@@ -89,40 +89,15 @@
                         <table class="table">
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.CodigoE)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Desde)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Hasta)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Correspondiente)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Comentarios)
+                                    @Html.DisplayNameFor(model => model.Cargo)
                                 </th>
                                 <th></th>
                             </tr>
-
                             @foreach (var item in Model)
                             {
                                 <tr>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.CodigoE)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Desde)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Hasta)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Correspondiente)
-                                    </td>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Comentarios)
+                                        @Html.DisplayFor(modelItem => item.Cargo)
                                     </td>
                                     <td>
                                         @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
@@ -131,7 +106,6 @@
                                     </td>
                                 </tr>
                             }
-
                         </table>
                     </div>
                 </div>

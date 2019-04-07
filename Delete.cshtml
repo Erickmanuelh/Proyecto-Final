@@ -1,6 +1,4 @@
-﻿
-@model Proyecto_Final_4.Models.Vacaciones
-
+﻿@model Proyecto_Final_4.Models.Cargos
 @{
     ViewBag.Title = "Totalizar";
     Layout = "";
@@ -87,53 +85,19 @@
                             <hr />
                             <dl class="dl-horizontal">
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.CodigoE)
+                                    @Html.DisplayNameFor(model => model.Cargo)
                                 </dt>
-
                                 <dd>
-                                    @Html.DisplayFor(model => model.CodigoE)
+                                    @Html.DisplayFor(model => model.Cargo)
                                 </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Desde)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Desde)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Hasta)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Hasta)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Correspondiente)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Correspondiente)
-                                </dd>
-
-                                <dt>
-                                    @Html.DisplayNameFor(model => model.Comentarios)
-                                </dt>
-
-                                <dd>
-                                    @Html.DisplayFor(model => model.Comentarios)
-                                </dd>
-
                             </dl>
                             @using (Html.BeginForm())
                             {
                                 @Html.AntiForgeryToken()
 
                                 <div class="form-actions no-color">
-                                    <input type="submit" value="Borrar" class="btn btn-default" /> |
-                                    @Html.ActionLink("Volver", "Index")
+                                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                                    @Html.ActionLink("Back to List", "Index")
                                 </div>
                             }
                         </div>
