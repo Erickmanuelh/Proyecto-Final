@@ -46,25 +46,30 @@
                         <div class="main-menu main-menu-light">
 
                         
-                                <ul>
-                                <li class="active"><a href="index.html">home</a></li>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="job-category.html">category</a></li>
+                            <ul>
+                                <li>@Html.ActionLink("Inicio", "Totalizar", "Nominas")</li>
+
                                 <li>
-                                    <a href="#">blog</a>
+                                    <a href="#">Crear</a>
+                                    <ul class="sub-menu">
+                                        <li>@Html.ActionLink("Inicio", "Index", "Nominas")</li>
+                                        <li>@Html.ActionLink("CrearNomina", "Create", "Nominas")</li>
+                                        <li>@Html.ActionLink("VerNomina", "Totalizar", "Nominas")</li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#">Informes</a>
                                     <ul class="sub-menu">
                                         <li>@Html.ActionLink("Nomina", "Totalizar", "Nominas")</li>
                                         <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact-us.html">contact</a></li>
                                 <li>
-                                    <a href="#">pages</a>
+                                    <a href="#">blog</a>
                                     <ul class="sub-menu">
-                                        <li><a href="job-search.html">Job Search</a></li>
-                                        <li><a href="job-single.html">Job Single</a></li>
-                                        <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
+                                        <li>@Html.ActionLink("Nomina", "Totalizar", "Nominas")</li>
+                                        <li><a href="blog-details.html">Blog Details</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -100,7 +105,7 @@
                         <span>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Trabajo hecho por 20174985 y 20174979 <i class="fa fa-heart-o" aria-hidden="true"></i> 
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </span>
                     </div>

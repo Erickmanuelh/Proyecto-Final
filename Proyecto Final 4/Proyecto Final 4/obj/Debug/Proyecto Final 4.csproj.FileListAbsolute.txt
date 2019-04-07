@@ -81,3 +81,4 @@ C:\Users\Erick\source\repos\Proyecto Final 4\Proyecto Final 4\obj\Debug\Proyecto
 C:\Users\Erick\source\repos\Proyecto Final 4\Proyecto Final 4\obj\Debug\Proyecto Final 4.csproj.CopyComplete
 C:\Users\Erick\source\repos\Proyecto Final 4\Proyecto Final 4\obj\Debug\Proyecto Final 4.dll
 C:\Users\Erick\source\repos\Proyecto Final 4\Proyecto Final 4\obj\Debug\Proyecto Final 4.pdb
+C:\Users\Erick\source\repos\Proyecto Final 4\Proyecto Final 4\obj\Debug\Proyecto Final 4.csprojAssemblyReference.cache
