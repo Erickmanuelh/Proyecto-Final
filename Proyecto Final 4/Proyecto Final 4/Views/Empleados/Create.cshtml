@@ -50,24 +50,30 @@
 
 
                             <ul>
-                                <li class="active"><a href="index.html">home</a></li>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="job-category.html">category</a></li>
+                                <li>@Html.ActionLink("Inicio", "Inicio", "Home")</li>
                                 <li>
-                                    <a href="#">blog</a>
+                                    <a href="#">Crear</a>
                                     <ul class="sub-menu">
-                                        <li>@Html.ActionLink("Nomina", "Totalizar", "Nominas")</li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li>@Html.ActionLink("Empleado", "Create", "Empleados")</li>
+                                        <li>@Html.ActionLink("Departamento", "Create", "Departamentos")</li>
+                                        <li>@Html.ActionLink("Cargo", "Create", "Cargos")</li>
+                                        <li>@Html.ActionLink("Nomina", "Create", "Nominas")</li>
+                                        <li>@Html.ActionLink("Salida", "Create", "Salidas")</li>
+                                        <li>@Html.ActionLink("Permiso", "Create", "Permisos")</li>
+                                        <li>@Html.ActionLink("Licencia", "Create", "Licencias")</li>
                                     </ul>
                                 </li>
-                                <li><a href="contact-us.html">contact</a></li>
                                 <li>
-                                    <a href="#">pages</a>
+                                    <a href="#">Informes</a>
                                     <ul class="sub-menu">
-                                        <li><a href="job-search.html">Job Search</a></li>
-                                        <li><a href="job-single.html">Job Single</a></li>
-                                        <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
+                                        <li>@Html.ActionLink("Empleado", "Index", "Empleados")</li>
+                                        <li>@Html.ActionLink("Departamento", "Index", "Departamentos")</li>
+                                        <li>@Html.ActionLink("Cargo", "Index", "Cargos")</li>
+                                        <li>@Html.ActionLink("Nominas", "Index", "Nominas")</li>
+                                        <li>@Html.ActionLink("NominaTotal", "Totalizar", "Nominas")</li>
+                                        <li>@Html.ActionLink("Salida", "Index", "Salidas")</li>
+                                        <li>@Html.ActionLink("Permiso", "Index", "Permisos")</li>
+                                        <li>@Html.ActionLink("Licencia", "Index", "Licencias")</li>
                                     </ul>
                                 </li>
                             </ul>
