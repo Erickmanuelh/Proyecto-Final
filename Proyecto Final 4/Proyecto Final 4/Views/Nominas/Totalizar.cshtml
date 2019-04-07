@@ -85,8 +85,14 @@
                         <h2>Nomina Actual</h2>
 
                         <h3 class="heading"> Total de la nomina es: @ViewBag.TotalSalario <br /></h3>
-                        <h3 class="heading">Total de empleados es: @ViewBag.TotalEmpleados</h3>
-   
+                        <h3 class="heading">Mes: @ViewBag.Mes</h3>
+                        <h3 class="heading">Anio: @ViewBag.Anio</h3>
+
+                        <div class="template-btn" />
+
+                        @Html.ActionLink("Generar", "Create", "Nominas")
+                    </div>
+
                     </div>
                 </div>
             </div>

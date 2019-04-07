@@ -1,0 +1,72 @@
+﻿@model Proyecto_Final_4.Models.Vacaciones
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Vacaciones</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CodigoE)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CodigoE)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Desde)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Desde)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Hasta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Hasta)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Correspondiente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Correspondiente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Comentarios)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Comentarios)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

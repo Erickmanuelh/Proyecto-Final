@@ -10,151 +10,107 @@ using Proyecto_Final_4.Models;
 
 namespace Proyecto_Final_4.Controllers
 {
-    public class NominasController : Controller
+    public class PermisosController : Controller
     {
         private Model1Container db = new Model1Container();
 
-        public ActionResult Totalizar()
-        {
-            ViewBag.TotalSalario = db.EmpleadosSet.Sum(a => a.Salario);
-         //   ViewBag.TotalEmpleados = db.EmpleadosSet.Count();
-
-
-            String sDate = DateTime.Now.ToString();
-            DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-
-            String dy = datevalue.Day.ToString();
-            String mn = datevalue.Month.ToString();
-            String yy = datevalue.Year.ToString();
-
-            ViewBag.Mes = mn;
-            ViewBag.Anio = yy;
-
-
-
-            //    var query = (from a in db.EmpleadosSet
-            //               select a);
-
-            db.SaveChanges();
-            return View();
-        }
-
-
-
-        // GET: Nominas
+        // GET: Permisos
         public ActionResult Index()
         {
-            return View(db.NominasSet.ToList());
+            return View(db.PermisosSet.ToList());
         }
 
-        // GET: Nominas/Details/5
+        // GET: Permisos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Permisos permisos = db.PermisosSet.Find(id);
+            if (permisos == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(permisos);
         }
 
-        // GET: Nominas/Create
+        // GET: Permisos/Create
         public ActionResult Create()
         {
-
-            ViewBag.TotalSalario = db.EmpleadosSet.Sum(a => a.Salario);
-            //   ViewBag.TotalEmpleados = db.EmpleadosSet.Count();
-
-
-            String sDate = DateTime.Now.ToString();
-            DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-
-            String dy = datevalue.Day.ToString();
-            String mn = datevalue.Month.ToString();
-            String yy = datevalue.Year.ToString();
-
-            ViewBag.Mes = mn;
-            ViewBag.Anio = yy;
-
-
             return View();
         }
 
-        // POST: Nominas/Create
+        // POST: Permisos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Anio,Mes,Monto")] Nominas nominas)
+        public ActionResult Create([Bind(Include = "Id,CodigoE,Desde,Hasta,Comentarios")] Permisos permisos)
         {
             if (ModelState.IsValid)
             {
-                
-                db.NominasSet.Add(nominas);
+                db.PermisosSet.Add(permisos);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nominas);
+            return View(permisos);
         }
 
-        // GET: Nominas/Edit/5
+        // GET: Permisos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Permisos permisos = db.PermisosSet.Find(id);
+            if (permisos == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(permisos);
         }
 
-        // POST: Nominas/Edit/5
+        // POST: Permisos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Anio,Mes,Monto")] Nominas nominas)
+        public ActionResult Edit([Bind(Include = "Id,CodigoE,Desde,Hasta,Comentarios")] Permisos permisos)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nominas).State = EntityState.Modified;
+                db.Entry(permisos).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nominas);
+            return View(permisos);
         }
 
-        // GET: Nominas/Delete/5
+        // GET: Permisos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Permisos permisos = db.PermisosSet.Find(id);
+            if (permisos == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(permisos);
         }
 
-        // POST: Nominas/Delete/5
+        // POST: Permisos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Nominas nominas = db.NominasSet.Find(id);
-            db.NominasSet.Remove(nominas);
+            Permisos permisos = db.PermisosSet.Find(id);
+            db.PermisosSet.Remove(permisos);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

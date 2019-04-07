@@ -10,151 +10,107 @@ using Proyecto_Final_4.Models;
 
 namespace Proyecto_Final_4.Controllers
 {
-    public class NominasController : Controller
+    public class VacacionesController : Controller
     {
         private Model1Container db = new Model1Container();
 
-        public ActionResult Totalizar()
-        {
-            ViewBag.TotalSalario = db.EmpleadosSet.Sum(a => a.Salario);
-         //   ViewBag.TotalEmpleados = db.EmpleadosSet.Count();
-
-
-            String sDate = DateTime.Now.ToString();
-            DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-
-            String dy = datevalue.Day.ToString();
-            String mn = datevalue.Month.ToString();
-            String yy = datevalue.Year.ToString();
-
-            ViewBag.Mes = mn;
-            ViewBag.Anio = yy;
-
-
-
-            //    var query = (from a in db.EmpleadosSet
-            //               select a);
-
-            db.SaveChanges();
-            return View();
-        }
-
-
-
-        // GET: Nominas
+        // GET: Vacaciones
         public ActionResult Index()
         {
-            return View(db.NominasSet.ToList());
+            return View(db.VacacionesSet.ToList());
         }
 
-        // GET: Nominas/Details/5
+        // GET: Vacaciones/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Vacaciones vacaciones = db.VacacionesSet.Find(id);
+            if (vacaciones == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(vacaciones);
         }
 
-        // GET: Nominas/Create
+        // GET: Vacaciones/Create
         public ActionResult Create()
         {
-
-            ViewBag.TotalSalario = db.EmpleadosSet.Sum(a => a.Salario);
-            //   ViewBag.TotalEmpleados = db.EmpleadosSet.Count();
-
-
-            String sDate = DateTime.Now.ToString();
-            DateTime datevalue = (Convert.ToDateTime(sDate.ToString()));
-
-            String dy = datevalue.Day.ToString();
-            String mn = datevalue.Month.ToString();
-            String yy = datevalue.Year.ToString();
-
-            ViewBag.Mes = mn;
-            ViewBag.Anio = yy;
-
-
             return View();
         }
 
-        // POST: Nominas/Create
+        // POST: Vacaciones/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Anio,Mes,Monto")] Nominas nominas)
+        public ActionResult Create([Bind(Include = "Id,CodigoE,Desde,Hasta,Correspondiente,Comentarios")] Vacaciones vacaciones)
         {
             if (ModelState.IsValid)
             {
-                
-                db.NominasSet.Add(nominas);
+                db.VacacionesSet.Add(vacaciones);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(nominas);
+            return View(vacaciones);
         }
 
-        // GET: Nominas/Edit/5
+        // GET: Vacaciones/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Vacaciones vacaciones = db.VacacionesSet.Find(id);
+            if (vacaciones == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(vacaciones);
         }
 
-        // POST: Nominas/Edit/5
+        // POST: Vacaciones/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Anio,Mes,Monto")] Nominas nominas)
+        public ActionResult Edit([Bind(Include = "Id,CodigoE,Desde,Hasta,Correspondiente,Comentarios")] Vacaciones vacaciones)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nominas).State = EntityState.Modified;
+                db.Entry(vacaciones).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(nominas);
+            return View(vacaciones);
         }
 
-        // GET: Nominas/Delete/5
+        // GET: Vacaciones/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Nominas nominas = db.NominasSet.Find(id);
-            if (nominas == null)
+            Vacaciones vacaciones = db.VacacionesSet.Find(id);
+            if (vacaciones == null)
             {
                 return HttpNotFound();
             }
-            return View(nominas);
+            return View(vacaciones);
         }
 
-        // POST: Nominas/Delete/5
+        // POST: Vacaciones/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Nominas nominas = db.NominasSet.Find(id);
-            db.NominasSet.Remove(nominas);
+            Vacaciones vacaciones = db.VacacionesSet.Find(id);
+            db.VacacionesSet.Remove(vacaciones);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
