@@ -1,14 +1,11 @@
 ﻿@model Proyecto_Final_4.Models.Nominas
-
 @{
     ViewBag.Title = "Totalizar";
     Layout = "";
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
@@ -17,16 +14,14 @@
     <!-- Page Title -->
     <title>About</title>
     @Styles.Render("~/Content/css")
-
     <style>
+
         .heading {
             color: #FFFFFF;
         }
     </style>
-
 </head>
 <body>
-
     <!-- Preloader Starts -->
     <div class="preloader">
         <div class="spinner"></div>
@@ -47,8 +42,34 @@
                         </div>
                         <div class="main-menu main-menu-light">
 
-
                             <ul>
+                                <li>@Html.ActionLink("Inicio", "Inicio", "Home")</li>
+                                <li>
+                                    <a href="#">Crear</a>
+                                    <ul class="sub-menu">
+                                        <li>@Html.ActionLink("Empleado", "Create", "Empleados")</li>
+                                        <li>@Html.ActionLink("Departamento", "Create", "Departamentos")</li>
+                                        <li>@Html.ActionLink("Cargo", "Create", "Cargos")</li>
+                                        <li>@Html.ActionLink("Nomina", "Create", "Nominas")</li>
+                                        <li>@Html.ActionLink("Salida", "Create", "Salidas")</li>
+                                        <li>@Html.ActionLink("Permiso", "Create", "Permisos")</li>
+                                        <li>@Html.ActionLink("Licencia", "Create", "Licencias")</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Informes</a>
+                                    <ul class="sub-menu">
+                                        <li>@Html.ActionLink("Empleado", "Index", "Empleados")</li>
+                                        <li>@Html.ActionLink("Departamento", "Index", "Departamentos")</li>
+                                        <li>@Html.ActionLink("Cargo", "Index", "Cargos")</li>
+                                        <li>@Html.ActionLink("Nominas", "Index", "Nominas")</li>
+                                        <li>@Html.ActionLink("NominaTotal", "Totalizar", "Nominas")</li>
+                                        <li>@Html.ActionLink("Salida", "Index", "Salidas")</li>
+                                        <li>@Html.ActionLink("Permiso", "Index", "Permisos")</li>
+                                        <li>@Html.ActionLink("Licencia", "Index", "Licencias")</li>
+                                    </ul>
+                                </li>
+                            </ul><ul>
                                 <li class="active"><a href="index.html">home</a></li>
                                 <li><a href="about.html">about us</a></li>
                                 <li><a href="job-category.html">category</a></li>
@@ -79,7 +100,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
-
                         <h2>Estas seguro de borrarlo?</h2>
                         <div>
                             <h4></h4>
@@ -88,29 +108,22 @@
                                 <dt>
                                     <p>  @Html.DisplayNameFor(model => model.Anio)</p>
                                 </dt>
-
                                 <dd>
                                     <p>    @Html.DisplayFor(model => model.Anio)</p>
                                 </dd>
-
                                 <dt>
                                     <p>  @Html.DisplayNameFor(model => model.Mes)</p>
                                 </dt>
-
                                 <dd>
                                     <p>   @Html.DisplayFor(model => model.Mes)</p>
                                 </dd>
-
                                 <dt>
                                     <p>   @Html.DisplayNameFor(model => model.Monto)</p>
                                 </dt>
-
                                 <dd>
                                     <p>   @Html.DisplayFor(model => model.Monto)</p>
                                 </dd>
-
                             </dl>
-
                             @using (Html.BeginForm())
                             {
                                 @Html.AntiForgeryToken()
@@ -121,7 +134,6 @@
                                 </div>
                             }
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -159,10 +171,8 @@
     </footer>
     <!-- Footer Area End -->
     <!-- Javascript -->
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>
-
 
