@@ -168,7 +168,12 @@
                             <div class="form-group">
                                 <p>     @Html.LabelFor(model => model.Estatus, htmlAttributes: new { @class = "control-label col-md-2" })</p>
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.Estatus, new { htmlAttributes = new { @class = "form-control", @oninvalid = "this.setCustomValidity('No puedes dejar el campo vacio')", oninput = "setCustomValidity('')", @required = "required" } })
+                                   
+                                    <select name="Estatus" id="Estatus">
+                                        <option value="Activo" >Activo</option>
+                                        <option value="Inactivo" >Inactivo</option>
+                                    </select>
+
                                     @Html.ValidationMessageFor(model => model.Estatus, "", new { @class = "text-danger" })
                                 </div>
                             </div>

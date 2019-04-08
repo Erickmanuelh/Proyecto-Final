@@ -1,4 +1,4 @@
-﻿﻿@model Proyecto_Final_4.Models.Salidas
+﻿@model Proyecto_Final_4.Models.Salidas
 @{
     ViewBag.Title = "Create";
     Layout = "";
@@ -101,7 +101,13 @@
                             <div class="form-group">
                                 <p> @Html.LabelFor(model => model.TipoSalida, htmlAttributes: new { @class = "control-label col-md-2" })</p>
                                 <div class="col-md-10">
-                                    @Html.EditorFor(model => model.TipoSalida, new { htmlAttributes = new { @class = "form-control" } })
+
+                                    <select name="TipoSalida" id="TipoSalida">
+                                        <option value="Activo">Renuncia</option>
+                                        <option value="Inactivo">Despido</option>
+                                        <option value="Inactivo">Desahucio</option>
+                                    </select>
+
                                     @Html.ValidationMessageFor(model => model.TipoSalida, "", new { @class = "text-danger" })
                                 </div>
                             </div>
