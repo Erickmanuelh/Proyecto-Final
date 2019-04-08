@@ -85,10 +85,10 @@
                             <hr />
                             <dl class="dl-horizontal">
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Cargo)
+                                    <p>   @Html.DisplayNameFor(model => model.Cargo)</p>
                                 </dt>
                                 <dd>
-                                    @Html.DisplayFor(model => model.Cargo)
+                                    <p>   @Html.DisplayFor(model => model.Cargo)</p>
                                 </dd>
                             </dl>
                             @using (Html.BeginForm())
@@ -96,7 +96,7 @@
                                 @Html.AntiForgeryToken()
 
                                 <div class="form-actions no-color">
-                                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                                    <input type="submit" value="Delete" class="template-btn" /> |
                                     @Html.ActionLink("Back to List", "Index")
                                 </div>
                             }

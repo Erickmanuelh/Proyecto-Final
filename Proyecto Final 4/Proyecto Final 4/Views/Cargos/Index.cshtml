@@ -89,7 +89,7 @@
                         <table class="table">
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Cargo)
+                                    <p>   @Html.DisplayNameFor(model => model.Cargo)</p>
                                 </th>
                                 <th></th>
                             </tr>
@@ -97,12 +97,12 @@
                             {
                                 <tr>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Cargo)
+                                        <p> @Html.DisplayFor(modelItem => item.Cargo)</p>
                                     </td>
                                     <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                                        @Html.ActionLink("Detalle", "Details", new { id = item.Id }) |
+                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
                                     </td>
                                 </tr>
                             }

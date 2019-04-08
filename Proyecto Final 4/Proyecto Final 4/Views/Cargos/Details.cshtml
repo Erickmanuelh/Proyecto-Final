@@ -1,17 +1,6 @@
 ﻿@model Proyecto_Final_4.Models.Cargos
 @{
     ViewBag.Title = "Details";
-}
-<h2>Details</h2>
-
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
-///////////////
-@model Proyecto_Final_4.Models.Departamentos
-@{
-    ViewBag.Title = "Totalizar";
     Layout = "";
 }
 <!DOCTYPE html>
@@ -95,10 +84,10 @@
                         
                             <dl class="dl-horizontal">
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.Cargo)
+                                    <p>  @Html.DisplayNameFor(model => model.Cargo)</p>
                                 </dt>
                                 <dd>
-                                    @Html.DisplayFor(model => model.Cargo)
+                                    <p> @Html.DisplayFor(model => model.Cargo)</p>
                                 </dd>
                             </dl>
                        

@@ -89,10 +89,10 @@
                         <table class="table">
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.CodigoD)
+                                    <p>   @Html.DisplayNameFor(model => model.CodigoD)</p>
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.NombreD)
+                                    <p>   @Html.DisplayNameFor(model => model.NombreD)</p>
                                 </th>
                                 <th></th>
                             </tr>
@@ -100,15 +100,15 @@
                             {
                                 <tr>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.CodigoD)
+                                        <p> @Html.DisplayFor(modelItem => item.CodigoD)</p>
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.NombreD)
+                                        <p> @Html.DisplayFor(modelItem => item.NombreD)</p>
                                     </td>
                                     <td>
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                                        @Html.ActionLink("Detalle", "Details", new { id = item.Id }) |
+                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
                                     </td>
                                 </tr>
                             }
