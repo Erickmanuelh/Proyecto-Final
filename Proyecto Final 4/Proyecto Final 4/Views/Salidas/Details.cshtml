@@ -1,4 +1,4 @@
-﻿@model Proyecto_Final_4.Models.Salidas
+﻿﻿@model Proyecto_Final_4.Models.Salidas
 @{
     ViewBag.Title = "Totalizar";
     Layout = "";
@@ -119,14 +119,14 @@
                             </dl>
                         </div>
                     </div>
-                        <p>
-                            @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
-                            @Html.ActionLink("Volver", "Index")
-                        </p>
+                    <p>
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+                        @Html.ActionLink("Volver", "Index")
+                    </p>
 
-                    </div>
                 </div>
             </div>
+        </div>
         </div>
     </header>
     <!-- Header Area End -->
